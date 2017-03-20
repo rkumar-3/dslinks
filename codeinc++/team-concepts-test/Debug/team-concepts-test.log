@@ -1,0 +1,3 @@
+﻿  stdafx.cpp
+  team-concepts-test.cpp
+LINK : fatal error LNK1104: cannot open file 'C:\code-experiments\codeinc++\team-concepts\Debug\team-concepts.lib'

@@ -1,0 +1,127 @@
+# README
+# ----------------------------------
+# Demonstrates the memory management primitive in modern C++ known as Smart Pointers.
+# 
+#
+# Phase 1. Uses old C++ 98 style pointers to build a Trie Data Strucutre for a Simple but efficient String Search
+# Phase 2. Use Modern C++ 2011/2014 to build a Trie Data Strucutre with memory mangement leveraging the smart pointer facility
+# Phase 2. make a dslink primitive that uses this search. 
+# Author: Ravi
+# ----------------------------------
+
+
+This code base is an experimental API to demonstrate that Demonstrates the memory management 
+primitive in modern C++ known as Smart Pointers. 
+
+Projects Comparing Modern C++ to C++ 98
+=======================================
+The goal is to compare the memory management support in modern C++ versus the 
+C++ 98 as a reference point.
+
+
+1. Project "team-concepts" builds a C++ 98 project and implements a Trie data strucutre 
+(which is a fancy name for a Tree used for String search ) which uses old-style raw pointers.
+
+2. Project "team-concepts-modern" then implements the same Trie data strucutre 
+using STL containers and Smart Pointers and uses a Modern C++ (2011/2014).
+
+The APIs are implemented run using C++ 98, C++ 2014 runtime.
+
+
+1. CODE REPOSIT URL
+====================
+https://github.com/rkumar-3/dslinks 
+
+2. MEMORY LEAK DETECTION
+=========================
+
+Microsoft VC++ distribution supports a facility to check for memory leaks called CRT Debug Heap. 
+The projects team-concepts and team-concepts-modern are instrumented to detect leaks.
+
+This code base running on a windows platform naturally uses a Microsoft facility to check for 
+memory leaks. For linux, we can take a platform dependent approach.
+
+SOURCE FILES LIST AND STRUCTURE
+
+ new file:README
+          codeinc++/team-concepts-modern
+		  codeinc++/team-concepts-test
+          codeinc++/team-concepts        
+		  
+		  codeinc++/team-concepts/Debug/team-concepts-modern.lib
+          codeinc++/team-concepts/src/Trie.cpp
+          codeinc++/team-concepts/src/Trie.h
+          codeinc++/team-concepts/src/TrieNode.cpp
+          codeinc++/team-concepts/src/TrieNode.h
+          codeinc++/team-concepts/src/inc/TrieConsts.h
+          codeinc++/team-concepts/test/team-concepts-test/unittest1.cpp
+
+3. TESTING STRATEGIES
+=========================
+A Project "team-concepts-test" is created to run and track unit tests. 
+
+Demonstrates the use of a mock test framework to test the above Library.
+
+It uses google test framework. However, there are many other frameworks such as boost unit test framework 
+that will work equally well.
+
+4. DEPLOYMENT STRATEGIES
+=========================
+Deploying this code as a DSLink and as a game is the next phase of this project.
+
+5. KNOWN LIMITATIONS
+=====================
+
+Primarily due to self-imposed time limits, some parts sucha as Class and Function headers 
+are not complete in this code base.
+
+6. SOURCE FILES LISTING
+
+                    README
+        new file:   codeinc++/team-concepts-modern/src/Trie.cpp
+        new file:   codeinc++/team-concepts-modern/src/Trie.h
+        new file:   codeinc++/team-concepts-modern/src/TrieNode.cpp
+        new file:   codeinc++/team-concepts-modern/src/TrieNode.h
+        new file:   codeinc++/team-concepts-modern/src/inc/TrieConsts.h
+        new file:   codeinc++/team-concepts-modern/src/inc/stdafx.h
+        new file:   codeinc++/team-concepts-modern/src/inc/targetver.h
+        new file:   codeinc++/team-concepts-modern/src/stdafx.cpp
+        new file:   codeinc++/team-concepts-modern/src/team-concepts-modern.cpp
+        new file:   codeinc++/team-concepts-modern/team-concepts-modern.vcxproj
+        new file:   codeinc++/team-concepts-modern/team-concepts-modern.vcxproj.filters
+        new file:   codeinc++/team-concepts-test/stdafx.cpp
+        new file:   codeinc++/team-concepts-test/stdafx.h
+        new file:   codeinc++/team-concepts-test/targetver.h
+        new file:   codeinc++/team-concepts-test/team-concepts-test.cpp
+        new file:   codeinc++/team-concepts-test/team-concepts-test.vcxproj
+        new file:   codeinc++/team-concepts-test/team-concepts-test.vcxproj.filters
+        new file:   codeinc++/team-concepts-test/team-concepts-test.vcxproj.user
+        new file:   codeinc++/team-concepts/.vs/team-concepts/v14/.suo
+        new file:   codeinc++/team-concepts/Debug/IsolatorCore.dll
+        new file:   codeinc++/team-concepts/Debug/team-concepts-modern.lib
+        new file:   codeinc++/team-concepts/Debug/team-concepts.exe
+        new file:   codeinc++/team-concepts/Performance1.psess
+        new file:   codeinc++/team-concepts/Trie.h
+        new file:   codeinc++/team-concepts/src/.vs/team-concepts/v14/.suo
+        new file:   codeinc++/team-concepts/src/Trie.cpp
+        new file:   codeinc++/team-concepts/src/Trie.h
+        new file:   codeinc++/team-concepts/src/TrieNode.cpp
+        new file:   codeinc++/team-concepts/src/TrieNode.h
+        new file:   codeinc++/team-concepts/src/inc/TrieConsts.h
+        new file:   codeinc++/team-concepts/src/inc/stdafx.h
+        new file:   codeinc++/team-concepts/src/inc/targetver.h
+        new file:   codeinc++/team-concepts/src/stdafx.cpp
+        new file:   codeinc++/team-concepts/src/team-concepts.cpp
+        new file:   codeinc++/team-concepts/team-concepts.IsolatorCache.user
+        new file:   codeinc++/team-concepts/team-concepts.VC.VC.opendb
+        new file:   codeinc++/team-concepts/team-concepts.VC.db
+        new file:   codeinc++/team-concepts/team-concepts.sln
+        new file:   codeinc++/team-concepts/team-concepts.vcxproj
+        new file:   codeinc++/team-concepts/team-concepts.vcxproj.filters
+        new file:   codeinc++/team-concepts/team-concepts.vcxproj.user
+        new file:   codeinc++/team-concepts/test/team-concepts-test/stdafx.cpp
+        new file:   codeinc++/team-concepts/test/team-concepts-test/stdafx.h
+        new file:   codeinc++/team-concepts/test/team-concepts-test/targetver.h
+        new file:   codeinc++/team-concepts/test/team-concepts-test/team-concepts-test.vcxproj
+        new file:   codeinc++/team-concepts/test/team-concepts-test/team-concepts-test.vcxproj.filters
+        new file:   codeinc++/team-concepts/test/team-concepts-test/unittest1.cpp
