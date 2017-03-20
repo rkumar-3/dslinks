@@ -5,13 +5,11 @@
 #
 # Phase 1. Uses old C++ 98 style pointers to build a Trie Data Strucutre for a Simple but efficient String Search
 # Phase 2. Use Modern C++ 2011/2014 to build a Trie Data Strucutre with memory mangement leveraging the smart pointer facility
-# Phase 2. make a dslink primitive that uses this search. 
+# Phase 3. The eventual goal is to make a dslink primitive and supports a game based on string search. 
 # Author: Ravi
 # ----------------------------------
 
-
-This code base is an experimental API to demonstrate that Demonstrates the memory management 
-primitive in modern C++ known as Smart Pointers. 
+This code base is an experimental API. 
 
 Projects Comparing Modern C++ to C++ 98
 =======================================
