@@ -30,7 +30,7 @@ The APIs are implemented run using C++ 98, C++ 2014 runtime.
 
 1. CODE REPOSIT URL
 ====================
-https://github.com/rkumar-3/dslinks 
+https://github.com/rkumar-3/dslinks.git
 
 2. MEMORY LEAK DETECTION
 =========================
